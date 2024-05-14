@@ -27,14 +27,14 @@ namespace Practica_2._0.Controllers
             return _managerpaciente.GetPaciente(ci);
         }
         [HttpPost]
-        public void Post([FromBody]Paciente paciente)
+        public async void Post([FromBody]Paciente paciente)
         {
-            _managerpaciente.CrearPaciente(paciente.Name, paciente.LastNamee,paciente.CI);
+            await _managerpaciente.CrearPaciente(paciente.Name, paciente.LastNamee,paciente.CI);
         }
         [HttpPut("{ci}")]
-        public void Put(int ci, [FromBody] Paciente paciente)
+        public async void Put(int ci, [FromBody] Paciente paciente)
         {
-            _managerpaciente.ActualizarPaciente(paciente.Name, paciente.LastNamee, ci);
+            await _managerpaciente.ActualizarPaciente(paciente.Name, paciente.LastNamee, ci);
         }
         [HttpDelete("{ci}")]
         public void Delete (int ci)

@@ -1,4 +1,5 @@
 using BusinessLogic.Managers;
+using Practica_2._0.Middleware;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);

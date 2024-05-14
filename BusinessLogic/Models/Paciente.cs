@@ -13,13 +13,17 @@ namespace BusinessLogic.Models
         public int CI { get; set; }
         public string bloodtype { get; set; }  
 
-        public Paciente (string Name, string LastName, int ci, string bloodtype)
+        public string codigo { get; set; }
+        public Paciente (string Name, string LastName, int ci, string bloodtype, string codigo)
         {
             this.Name = Name;
             this.LastNamee  = LastName; 
             this.CI = ci;
             this.bloodtype = bloodtype;
+            this.codigo = codigo;
         }
+        public Paciente()
+        { }
     }
 
 }
